@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartas</title>
+</head>
+<body>
+  <h1>Cartas Pokemón</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Dano</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="carta : ${cartas}">
+      <td th:text="${carta.Nome}"></td>
+      <td th:text="${carta.Tipo}"></td>
+      <td th:text="${carta.Dano}"></td>
+    </tr>
+    </tbody>
+  </table>
+</body>
+</html>
